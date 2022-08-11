@@ -34,7 +34,7 @@ public class ClockFrame extends JFrame{
         this.setTitle("Clock");                                                 //Nome da aba é clock
         this.setLayout(new FlowLayout());                                       //Layout para centralizar
         this.setSize(350, 200);                                                 //Tamanho da aba
-        this.setResizable(false);                                                //Deixar a aba mudar de tamanho
+        this.setResizable(false);                                               //Não deixar a aba mudar de tamanho
         
         
         
@@ -42,7 +42,7 @@ public class ClockFrame extends JFrame{
         //Fomats.
         
         dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        timeFormat = new SimpleDateFormat("hh:mm:ss");                          //Criação do formatador de horário
+        timeFormat = new SimpleDateFormat("kk:mm:ss");                          //Criação do formatador de horário
         
         //TimeLabels.
         
