@@ -6,6 +6,7 @@ package javaclockapp;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.Level;
@@ -31,9 +32,12 @@ public class ClockFrame extends JFrame{
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                    //permite fechar a aba
         this.setTitle("Clock");                                                 //Nome da aba é clock
-        //this.setLayout(new FlowLayout());                                       //Layout para centralizar
+        this.setLayout(new FlowLayout());                                       //Layout para centralizar
         this.setSize(350, 200);                                                 //Tamanho da aba
         this.setResizable(false);                                                //Deixar a aba mudar de tamanho
+        
+        
+        
         
         //Fomats.
         
@@ -46,6 +50,8 @@ public class ClockFrame extends JFrame{
         timeLabel.setForeground(Color.green);
         timeLabel.setBackground(Color.BLACK);
         timeLabel.setOpaque(true);
+        timeLabel.setFont(new Font("Times New Roman", Font.PLAIN, 80));
+        
         
         //Box layouts são a solução nesse caso.
         
@@ -56,7 +62,7 @@ public class ClockFrame extends JFrame{
         //Date Labels
         
         dateLabel = new JLabel();
-        
+        dateLabel.setFont(new Font("Times New Roman", Font.ITALIC, 50));
         //dateLabel.setHorizontalAlignment((this.getX()/2) + 30);
         //dateLabel.setVerticalAlignment((this.getY()/2) + 30);
         
@@ -64,7 +70,7 @@ public class ClockFrame extends JFrame{
         
         
         this.add(timeLabel);                                                    //Adicionando a camada
-        //this.add(dateLabel);
+        this.add(dateLabel);
         
         
         
